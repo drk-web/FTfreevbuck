@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free V-Bucks by Drk</title>
+    <style>
+        /* Background Image */
+        body {
+            background-image: url('https://i.redd.it/xeg9p8856xc91.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow-y: scroll;
+        }
+
+        /* Discord link at the top-right */
+        .discord-link {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #6a0dad;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .discord-link:hover {
+            background-color: #7a1adf;
+        }
+
+        /* Main heading "Free V-Buck by Drk" */
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            color: yellow;
+            font-family: 'Impact', sans-serif;
+            text-shadow: 2px 2px 10px black;
+            margin-top: 100px;
+        }
+
+        /* Form Section */
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        input[type="text"], input[type="number"] {
+            font-size: 18px;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 2px solid #f1c40f;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        input[type="submit"] {
+            font-size: 18px;
+            padding: 10px;
+            background-color: yellow;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #f39c12;
+        }
+
+        /* Message after form submission */
+        .confirmation-message {
+            color: green;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        /* Information Section */
+        .information-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .information-title {
+            font-size: 30px;
+            color: yellow;
+            font-family: 'Impact', sans-serif;
+            text-shadow: 2px 2px 10px black;
+        }
+
+        .info-text {
+            font-size: 18px;
+            color: white;
+            text-align: left;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Discord Link -->
+    <a href="https://discord.gg/dDZEpr2n" class="discord-link" target="_blank">Join my Discord</a>
+
+    <!-- Main Heading -->
+    <h1>Free V-Buck by Drk</h1>
+
+    <!-- Form for Username and V-Bucks -->
+    <div class="form-container">
+        <form id="vbucksForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="number" id="vbucks" placeholder="Number of V-Bucks (max 5000)" max="5000" required>
+            <input type="submit" value="Submit">
+        </form>
+
+        <!-- Confirmation Message -->
+        <div id="confirmationMessage" class="confirmation-message" style="display: none;">
+            Your transaction will be completed within 2 minutes or more.
+        </div>
+    </div>
+
+    <!-- Information Section -->
+    <div class="information-container">
+        <div class="information-title">Information</div>
+        <div class="info-text">
+            Welcome to the Free V-Bucks site! This is a fun, joke site that mimics the idea of receiving V-Bucks for free, just for laughs. Remember, this site is not affiliated with Fortnite or any of its creators.
+            <br><br>
+            If you're looking to learn more about the world of Fortnite and its amazing skins, check out their official website. But please, don't take this site seriously! It's all in good fun.
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Handle form submission
+        document.getElementById("vbucksForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Get input values
+            var username = document.getElementById("username").value;
+            var vbucks = document.getElementById("vbucks").value;
+
+            // Display confirmation message
+            if (username && vbucks) {
+                document.getElementById("confirmationMessage").style.display = "block";
+            }
+        });
+    </script>
+
+</body>
+</html>
+
